@@ -192,12 +192,6 @@ source:
 | `assets/IMG_6967.jpg` | 團隊頁 | 核心成員背景 | 已摘錄 |
 | `assets/IMG_6968.jpg` | 資金用途 | 1000 萬獎勵金規劃 | 已摘錄 |
 | `assets/IMG_6969.jpg` | 結尾頁 | 收尾與聯絡資訊 | 已摘錄 |
-| `assets/IMG_6970.jpg` | 下一組內容 | BuggiPro 開場 | 已移交 027 |
-| `assets/IMG_6971.jpg` | 下一組內容 | BuggiPro 團隊頁 | 已移交 027 |
-| `assets/IMG_6972.jpg` | 下一組內容 | BuggiPro 問題頁 | 已移交 027 |
-| `assets/IMG_6973.jpg` | 下一組內容 | BuggiPro 舞台畫面 | 已移交 027 |
-| `assets/IMG_6974.jpg` | 下一組內容 | BuggiPro 問題頁 | 已移交 027 |
-| `assets/IMG_6975.jpg` | 下一組內容 | BuggiPro 技術頁 | 已移交 027 |
 
 ## 原始資料
 
