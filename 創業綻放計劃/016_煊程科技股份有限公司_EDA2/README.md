@@ -85,14 +85,46 @@ source:
 
 ---
 
-## 投資人快速檢視
+## 依簡報圖片補證（assets）
 
-| 亮點 | 疑慮／待釐清 |
-|------|----------------|
-| 先進封裝物理痛點真實 | 與 Synopsys／Cadence AI 路線重疊風險 |
-| AI Agent 差異化敘事 | 客戶名單、ARR、續約率未披露 |
-| 台積電系團隊 + 封裝大佬 | 願景跨翹曲／熱影等多目標，執行聚焦度 |
-| 地端訂閱符合半導體習慣 | 大廠綁定客戶送 AI 功能的威脅 |
+### IMG_6776：產品定位頁
+
+- 簡報品牌主軸為 `NEUROSHINE / INPACK.AI`，定位「AI-Powered EDA Integration Platform」。  
+- 圖示涵蓋 thermal、warpage、SI/PI、PDN、reliability，對應先進封裝多物理問題。  
+- 顯示產品名稱在對外材料有 `E-Type.AI / InPack.AI` 雙口徑，筆記以現場頁面 `InPack.AI` 併記。
+
+### IMG_6777 / IMG_6778 / IMG_6779 / IMG_6780：產業轉折與痛點拆解
+
+- 核心論述：價值重心從前段製程 scaling 轉向後段 integration。  
+- 封裝成為系統瓶頸，單靠電性導向工具不足，需多晶片與 3D 封裝系統級設計。  
+- 痛點拆成三塊：物理挑戰（翹曲/耦合）、設計 trade-off（功耗/訊號/熱）、工具碎片化導致時程延誤。
+
+### IMG_6781：產品願景與台灣優勢
+
+- 頁面明示台灣封裝供應鏈優勢作為切入點。  
+- InPack.AI 敘事從 chiplets/interposer/3D stacking 串到 next-generation EDA platform。  
+- 強調 system-level integration 與 AI-native automation。
+
+### IMG_6782：核心團隊與商業化顧問
+
+- 團隊頁可辨識 CEO/Founder 與榮譽董事、顧問群（含跨半導體大廠與投資背景）。  
+- 支持「深技術 + 產業化」雙軌團隊配置敘事。
+
+### IMG_6783 / IMG_6784：Toolset 架構
+
+- 三段式工具鏈：Simulator（physics-based）→ Emulator（AI surrogate）→ AI Designer（optimization）。  
+- 頁面標示 data & knowledge loop，強調在多物理高精度與快速迭代間平衡。  
+- 對應 README 既有三層能力描述（數值、AI、協同設計）。
+
+### IMG_6785 / IMG_6786：Roadmap 與結論頁
+
+- Roadmap 顯示 2026~2030 階段：copilot → agent → autonomous engineering platform → semiconductor foundation model → InPack.AI OS。  
+- 結論頁標示 AI-native design 效益（如 10-15 分鐘級別、高自動化等敘事），主打從手動流程走向 autonomous engineering。  
+- 這兩頁是產品長期願景與技術路線圖證據。
+
+### IMG_6787：邊界說明
+
+- `IMG_6787` 已進入下一家公司（蔚流生技）簡報，非第 16 組內容，需排除。
 
 ---
 
@@ -120,19 +152,43 @@ source:
 
 ---
 
-## 待確認問題
+## 我學到的 3 件事
 
-- [ ] 簡報截圖補入 `assets/`（付費客戶、訂閱價格帶）
-- [ ] 產品正式英文名（E-Type.AI / Invent AI）
-- [ ] 與台積電／封測廠 POC 進度
+1. **先進封裝已是系統級問題**：第 16 組最清楚的訊息是「封裝不是後段配角，而是性能與良率瓶頸」。  
+2. **AI 在 EDA 的價值是縮短反覆試錯**：用 surrogate + optimization 接在物理模擬後面，才能同時兼顧準度與速度。  
+3. **新創切入方式是補位而非取代**：與 Synopsys/Cadence 生態並行、在物理分析站點提供高價值工具，是更可行路徑。
+
+---
+
+## Assets 對照表（第 16 組）
+
+| 檔名 | 預期內容 | 需擷取欄位 | 狀態 |
+|------|----------|------------|------|
+| `assets/IMG_6776.jpg` | 產品定位頁 | InPack.AI、問題範圍圖示 | 已摘錄 |
+| `assets/IMG_6777.jpg` | 產業轉折 | Front-end→Back-end integration | 已摘錄 |
+| `assets/IMG_6778.jpg` | 封裝必要性 | 單晶片到多晶片演化 | 已摘錄 |
+| `assets/IMG_6779.jpg` | 封裝必要性（同頁） | 同上 | 已摘錄 |
+| `assets/IMG_6780.jpg` | 設計瓶頸 | 物理/設計/工具三大痛點 | 已摘錄 |
+| `assets/IMG_6781.jpg` | 產品願景 | 台灣優勢、系統整合路徑 | 已摘錄 |
+| `assets/IMG_6782.jpg` | 團隊頁 | 核心團隊與顧問配置 | 已摘錄 |
+| `assets/IMG_6783.jpg` | Toolset | Simulator/Emulator/AI Designer | 已摘錄 |
+| `assets/IMG_6784.jpg` | Toolset（同頁） | 同上 | 已摘錄 |
+| `assets/IMG_6785.jpg` | 路線圖 | 2026~2030 roadmap | 已摘錄 |
+| `assets/IMG_6786.jpg` | 結論頁 | autonomous engineering 效益 | 已摘錄 |
+| `assets/IMG_6787.jpg` | 下一組開場 | 非本案內容 | 已排除 |
+| `assets/IMG_6610~6626.jpg` | 歷史/場外素材 | 非決賽主簡報連續頁 | 先不採用 |
+| `assets/IMG_6682.jpg` | 展區海報 | 公司品牌與簡介 | 已摘錄（定性） |
 
 ---
 
 ## 原始資料
 
 - `/Users/cloud_creativer/錄音檔轉逐字稿/20260527_創業綻放計劃決賽_1.vtt`（逐字稿作「宣承科技」，以 **煊程科技** 為準）
+- [煊程科技官網](https://www.neuroshine.com/)
 
 ## 更新紀錄
 
 - 2026-05-28：改寫 Q&A 為評審問、團隊答格式
 - 2026-05-28：以創投視角重寫 pitch 摘要
+- 2026-05-28：完成第 16 組 assets 圖片轉檔與回填（`IMG_6776~6787`）
+- 2026-05-28：依「評審問答重點版 SOP」移除待確認段落，新增「依簡報圖片補證」「我學到的 3 件事」「Assets 對照表」
