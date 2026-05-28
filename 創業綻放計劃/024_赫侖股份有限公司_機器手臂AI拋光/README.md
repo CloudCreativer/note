@@ -20,7 +20,8 @@ source:
 
 ## 30 秒看懂
 
-赫侖主打製造業拋光/打磨自動化，核心是「地端控制 + 雲端學習」與可累積製程資料的 AI 系統。評審 QA 聚焦在：獲利結構、跨廠牌可擴展性、拋光液與高反射材質下的辨識可信度、以及 Foundation Model 到底賣給誰、如何形成可複製商模。
+赫侖（`HOLON ROBOTICS`）主打製造業研磨/拋光自動化，核心是 `HolonOS`（地端執行）與 `HolonCloud`（雲端學習）的雙飛輪。  
+簡報主張已累積多產業案例，並用「品牌無關、全尺寸覆蓋、跨場域資料湖」做差異化；商業路徑是 end-user + SI + supplier 三層擴張。
 
 ## 他們在做什麼
 
@@ -47,9 +48,9 @@ source:
 ## 實績與進展（決賽現場）
 
 - 逐字稿可辨識的主張：
-  - 四人團隊曾達到千萬級年營收（口述）。
-  - 已進入多種工件與材料場景，並提及軍工與航太等高要求應用。
-  - 產品在台灣已有一定數量裝機/使用案例（口述數字需二次核對）。
+  - 已進入多種工件與材料場景，並提及航太、國防、半導體相關應用。
+  - 簡報頁面揭露累計 `US$1M revenue to date`、`17 successful use cases`、`9 industries`。
+  - 頁面顯示效率敘事：`85% time savings`、`30% boost in productivity`（案例型佐證）。
 - 評審追問焦點：
   - 目前營收是否過度依賴專案型收入。
   - 跨品牌/跨機器手臂是否真可少客製。
@@ -58,12 +59,71 @@ source:
 
 ## 依簡報圖片補證（assets）
 
-- `assets` 目前無檔案，暫無法用圖片回填數字。
-- 建議補件：
-  - 營收結構圖（project vs recurring）。
-  - 導入時程前後對比（PoC、上線、良率提升）。
-  - 不同材質/反光條件測試數據圖。
-  - 客戶分層與續約/擴線數據。
+### IMG_6694：展區海報
+
+- 海報可辨識品牌 `HOLON ROBOTICS / 赫侖` 與公司定位。  
+- 支持 README 的「機器手臂 AI 拋光」主題與對外展示脈絡。
+
+### IMG_6915 / IMG_6917 / IMG_6918：開場與問題定義
+
+- 主題直接鎖定 `Grinding & Polishing`，強調仍大量依賴人力與經驗。  
+- 開場頁明確呈現「Experience-Driven Intelligent Robot」產品方向。  
+- 這三張是第 24 組開場與痛點核心頁。
+
+### IMG_6919：效益案例頁
+
+- 頁面列出 `85% Time savings` 與 `30% Boost in productivity`。  
+- 並附管理者/操作端案例敘述，作為導入後效益證據。
+
+### IMG_6920：雙飛輪架構
+
+- 技術飛輪：`HolonOS` + `HolonCloud`，以 first-hand data 持續學習。  
+- 商業飛輪：Sales → SI → End-user → Subscription，支撐雙收入流。
+
+### IMG_6921：產品能力頁
+
+- `HolonOS` 三項重點：Unified Interface、CAD-Free Path Generation、In-process AI。  
+- 對應「跨設備整合 + 自動路徑 + 製程中學習」能力敘事。
+
+### IMG_6922：商業驗證頁
+
+- 數字可辨識：`US$1M revenue to date`、`17 successful use cases`、`9 industries`。  
+- 頁面也展示多家客戶/合作品牌 logo，支援市場驗證說法。
+
+### IMG_6923：高價值市場切入
+
+- 列出航太、國防、半導體腔體等高附加價值場域。  
+- 頁面標示已啟動多個 POC 與至少一個合約進展敘事。
+
+### IMG_6924：GTM 策略
+
+- 三段式 go-to-market：End-users、System Integrators、Key Suppliers。  
+- 與 README 既有「直客 + SI + 夥伴」路徑一致。
+
+### IMG_6925：市場規模頁
+
+- 市場數字：`TAM $3.6B`、`SAM $1.8B`、`SOM $180M`，並附 `CAGR 16%`。  
+- 可作為商業規模與成長性補證。
+
+### IMG_6926：全球競爭定位
+
+- 頁面主張差異化：brand-agnostic、small-to-large parts coverage、3-year cross-sector data lake。  
+- 並放入國際競品/同類型玩家對照視角。
+
+### IMG_6927：行銷與展會佈局
+
+- 展示多個展會與生態夥伴（含 CES、Automate、NVIDIA GTC 等節點）。  
+- 支持國際拓展與品牌能見度建構。
+
+### IMG_6928：團隊頁
+
+- 團隊成員覆蓋機械、控制、軟體與 AI；頁面也列出學研/產業背景。  
+- 作為「跨域落地能力」的組織證據。
+
+### IMG_6929：募資與 KPI
+
+- 頁面顯示募資節點：Angel 已完成（`US$0.5M`），Seed 規劃（`US$2M`）。  
+- `Use of Proceeds` 與 KPI 分配（R&D、GTM、AI infra、operation）有明確比例與目標數字。
 
 ## 評審提問與回答
 
@@ -97,7 +157,21 @@ source:
 
 | 檔名 | 圖片主題 | 需擷取欄位 | 狀態 |
 |---|---|---|---|
-| （目前無檔） | - | - | 排除（待補） |
+| `assets/IMG_6694.jpg` | 展區海報 | 品牌定位與公司資訊 | 已摘錄 |
+| `assets/IMG_6915.jpg` | 開場頁 | 研磨拋光痛點 | 已摘錄 |
+| `assets/IMG_6917.jpg` | 痛點頁 | 55% 人力依賴敘事 | 已摘錄 |
+| `assets/IMG_6918.jpg` | 產品主張 | Experience-Driven Robot | 已摘錄 |
+| `assets/IMG_6919.jpg` | 效益頁 | 85%/30% 指標 | 已摘錄 |
+| `assets/IMG_6920.jpg` | 雙飛輪架構 | HolonOS/HolonCloud 商業飛輪 | 已摘錄 |
+| `assets/IMG_6921.jpg` | 產品頁 | Unified/CAD-Free/In-process AI | 已摘錄 |
+| `assets/IMG_6922.jpg` | 商業驗證 | US$1M、17案例、9產業 | 已摘錄 |
+| `assets/IMG_6923.jpg` | 高價值市場 | 航太/國防/半導體場域 | 已摘錄 |
+| `assets/IMG_6924.jpg` | GTM策略 | End-user/SI/Supplier | 已摘錄 |
+| `assets/IMG_6925.jpg` | 市場規模 | TAM/SAM/SOM、CAGR | 已摘錄 |
+| `assets/IMG_6926.jpg` | 競爭定位 | brand-agnostic 等差異化 | 已摘錄 |
+| `assets/IMG_6927.jpg` | 展會行銷 | 國際展會與夥伴節點 | 已摘錄 |
+| `assets/IMG_6928.jpg` | 團隊頁 | 跨域團隊能力 | 已摘錄 |
+| `assets/IMG_6929.jpg` | 募資與KPI | Seed 計畫與資金用途 | 已摘錄 |
 
 ## 原始資料
 
@@ -107,4 +181,4 @@ source:
 ## 更新紀錄
 
 - 2026-05-28：依 SOP 重寫為 12 章節格式，完成第 3 家（本檔第 24 組）QA 正確性註記版。
-- 2026-05-28：盤點 `assets` 無檔案，已標記待補圖片證據。
+- 2026-05-28：完成第 24 組 assets 圖片轉檔與回填（`IMG_6694, IMG_6915, IMG_6917~6929`）。
