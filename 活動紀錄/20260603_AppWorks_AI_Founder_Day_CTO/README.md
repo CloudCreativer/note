@@ -4,7 +4,7 @@ title: AppWorks AI Founder Day — CTO / Builder 專場
 date: 2026-06-03
 track: CTO / Builder
 location: 台北市信義區（報名後顯示詳細地址）
-status: draft
+status: final
 has_images: true
 tags:
   - AppWorks
@@ -17,6 +17,9 @@ tags:
   - ABConvert
 source:
   - 20260603_AppWorks AI Founder Day_1.vtt
+  - 20260603_AppWorks AI Founder Day_2.vtt
+  - 20260603_AppWorks AI Founder Day_1.m4a
+  - 20260603_AppWorks AI Founder Day_2.m4a
   - assets/images/jpeg/（現場簡報 40 張）
   - https://luma.com/px31nbtx
   - https://www.cebillhsu.xyz/ai-employee-setup
@@ -31,8 +34,9 @@ source:
 |------|------|
 | **活動** | [2026 AppWorks AI Founder Day](https://luma.com/px31nbtx) |
 | **主辦** | AppWorks AI Arm（協力：OpenAI、Zeabur） |
-| **本筆記涵蓋** | 上半場（VTT 已整理）+ 簡報照片；**下半場逐字稿生成中** |
-| **逐字稿** | `20260603_AppWorks AI Founder Day_1.vtt`（約至 OpenAB 結束） |
+| **本筆記涵蓋** | 全場（VTT #1 主題分享 + VTT #2 OpenAI／工作坊）+ 簡報照片 |
+| **逐字稿** | `_1.vtt`（開場～OpenAB）· `_2.vtt`（Thomas／Codex 工作坊～散場） |
+| **錄音** | 同檔名 `.m4a` 兩段 |
 | **現場照片** | 40 張 JPEG → [`assets/images/照片索引.md`](assets/images/照片索引.md) |
 | **處理流程** | VTT 五階 Pipeline + 簡報 OCR 補強（規範見 [`活動紀錄架構.md`](../活動紀錄架構.md)） |
 
@@ -45,8 +49,8 @@ source:
 | Jeffrey · ABConvert | ✅ | ✅ | 含 AW#28 簡報頁、對談照 |
 | Zeabur · Brian | ✅ | ✅ | Agent Skills、Nufus |
 | OpenAB · Allen | ✅ | ✅ | Bot2Bot、Discord review 截圖 |
-| OpenAI · Thomas Jeng | ❌ | ✅ | **待 VTT 下半部** |
-| Codex 工作坊 | ❌ | 部分 ✅ | 架構圖與 demo 有照片；細節待逐字稿 |
+| OpenAI · Thomas Jeng | ✅ | ✅ | VTT #2 |
+| Codex 工作坊 · Jane / Jordan | ✅ | ✅ | 含現場福利、三組 demo 得獎 |
 
 ### 官方議程對照（CTO 場）
 
@@ -347,69 +351,136 @@ Coding CLI（Codex 等；全球首批支援 Antigravity CLI）
 
 ---
 
-### 第 5 章｜OpenAI — Thomas Jeng（10:25–10:35 ＋ 延伸簡報）⏳ VTT 待補
+### 第 5 章｜OpenAI — Thomas Jeng & Tyler（10:25–12:15 前半）｜VTT #2
 
-> 本章主要來自**現場簡報照片**；逐字稿下半部完成後再交叉修訂。
+**講者**：Thomas Jeng（OpenAI 亞洲新創）  
+**現場團隊**：Johnny（新加坡 ADE）、Neil（Account Director · 新創）、Kyler（Codex）
 
-#### 5.1 Paradigm Shift：AI 成為隊友
+#### 5.1 Paradigm Shift：2026 = 隊友
 
 ![2022 → 2025 → 2026](assets/images/jpeg/IMG_7056.jpg)
 
-| 年份 | 定位 | 代表能力 |
+| 年份 | 定位 | 能做什麼 |
 |------|------|----------|
-| **2022** | 聊天機器人 | ChatGPT 推出 |
-| **2025** | 工具 | Deep Research、圖片生成、文件編輯、Codex… |
-| **2026** | **隊友** | 自動化軟體開發、超級個人助理、End-to-end 商業工作流 |
+| **2022** | 聊天機器人 | 文字進出、趣味應用 |
+| **2025** | 工具 | Deep Research、圖片、文件、**Codex** — 嵌入 workflow |
+| **2026+** | **隊友** | ① 自動化軟體開發 ② 超級個人助理 ③ **End-to-end 商業工作流**（最難） |
 
-#### 5.2 模型能力與成本
+**要完成 paradigm shift 的六項條件（Thomas 歸納）**
 
-![能力持續進步](assets/images/jpeg/IMG_7057.jpg)  
+1. Agent **自主執行時間拉長**（複雜任務需長 runtime）
+2. **多模態** I/O（語音、影像、圖片、文件）
+3. 適用 **非 AI-native 介面**（不是每件事都有 MCP/API）
+4. **長期記憶**與理解
+5. **安全、簡易部署**
+6. **治理**（企業不能把 AI 隨便丟進去）
+
+#### 5.2 模型與 benchmark（簡報 + 口頭）
+
 ![ARC-AGI-2 能力 vs 成本](assets/images/jpeg/IMG_7058.jpg)
 
-- 簡報主軸：**強大的通用能力，成本越來越低**（ARC-AGI-2 Leaderboard：分數 vs 每任務成本）。
-- 另有 **GDPval** 等 benchmark 表（簡報標 **OpenAI Confidential** — 僅記架構，不複製精確數字）。
-- Knowledge cutoff 投影片標示：**2026-02**（[`IMG_7075.jpg`](assets/images/jpeg/IMG_7075.jpg)）。
+| 標竿 | 重點 |
+|------|------|
+| **ARC-AGI-2** | 抽象推理；能力急速上升、**CP 值**相對高 |
+| **SWE-bench 系** | 編碼能力；**GPT-5.5** 在成本與時間上表現突出（簡報橘色標示） |
+| **GDPval** | 非程式工作（財模、簡報等）；AI 輸出與人類專家盲測 — **GPT-5.5 約 85%+** 場次優於人類 |
 
-#### 5.3 Agents SDK · Pictionary Lab 示範
+> Thomas 強調：模型輸出已很好，但 **AI 系統建構** 仍不完善 — 這是 OpenAI 做 SDK、Responses API、Codex harness 的原因。  
+> 簡報標 **Confidential** — 精確分數見投影片，筆記不逐格抄錄。
+
+**其他能力線**：語音 Speech-to-Speech、影像（Character 級品質已可進工作場景）、財模／簡報／程式等基礎模型廣化。
+
+**台灣聯絡**：商務找 **Neil**；技術找 **ADE**（新加坡團隊服務台灣）。AI-native 新創歡迎合作。
+
+#### 5.3 現場福利（工作坊前公布）
+
+| 項目 | 內容 |
+|------|------|
+| 點數 | 每人 **$250** API credits + **3 個月** Technology Pro |
+| 申請 | 活動表格（Thomas 請**先不要掃**，統一說明後填） |
+| Email | 必須是已登入過 **ChatGPT 的同一信箱** |
+| Org ID | 開發者平台 → Settings → General → `org-...`（不是公司名稱） |
+| 登入 Codex | 建議 **ChatGPT SSO**，勿只用 API key（否則無法用 plugins） |
+
+#### 5.4 Tyler · Agents SDK & Pictionary Lab
 
 ![Pictionary Lab 架構](assets/images/jpeg/IMG_7079.jpg)  
-![現場 demo 猜中太陽](assets/images/jpeg/IMG_7080.jpg)
+![現場 demo](assets/images/jpeg/IMG_7080.jpg)
 
-- 講者稱約 **30–45 分鐘** 用 Agents SDK 完成可玩專案，再請 AI **畫出 codebase 架構圖**（投影片底部字幕）。
-- **開源、可公開**；Codex SDK 同樣公開（字幕補充）。
-
-**雙路徑架構（簡報摘要）**
-
-| 路徑 | 角色 | 技術 |
-|------|------|------|
-| **AI Guesser** | 看畫猜詞、可語音 | Browser **RealtimeSession**（WebRTC）、`gpt-realtime`、tools = guardrails |
-| **AI Drawer** | 畫筆觸 | Server **Agents SDK**、`gpt-4o`（簡報另一版寫 gpt-3.5）、`computer_action` tool |
-| **通訊** | — | Socket.IO：`canvas:snapshot`、`agent:observe-canvas`、`canvas:stroke`、`game:state` |
-
-- **Guardrail**：agent **只能透過 tool** 影響 canvas（不能直接改 DOM）。
-- Guesser 得分在 **audio 結束後** 才更新 GameStore。
-
-#### 5.4 Codex 產品要點（簡報）
-
-![持續工作直到目標完成](assets/images/jpeg/IMG_7062.jpg)  
-![High Agency Engineering](assets/images/jpeg/IMG_7063.jpg)
-
-| 主題 | 重點 |
-|------|------|
-| **Goal** | 持續工作直到完成；可 **暫停、編輯目標、Steer** |
-| **Codex** | High agency engineering；**Lean on Prompt** |
-| **Skills** | plan、search、write、critique、execute、test…；App 內 **Discover Skills** |
-| **Prompt** | 具體列出「畫面上會看到的內容與層級」（農夫市集 UI 範例） |
-| **其他** | Reasoning Effort、Web search tools、Side panel 臨時對話 |
-
-![JS→TS 遷移 Side 對話範例](assets/images/jpeg/IMG_7088.jpg) — 顯示 Codex 在長任務中回報進度（zod、Vitest、strict TS）。
+- **Codex 30–45 分鐘** 做完可玩專案，再請 AI **畫架構圖**（與簡報字幕一致）。
+- 主體：**Agents SDK**（TypeScript / JavaScript，**免費**開源）。
+- 玩法：一人畫、AI **語音猜**（背後有「隱藏 actor」聽關鍵字 — 現場猜測用 **GPT-5.5** + computer use）。
+- 架構：Guesser 走 **RealtimeSession**；Drawer 走 server **Agents SDK** + tools 當 **guardrail**（見 §5.3 簡報表與 [`IMG_7079`](assets/images/jpeg/IMG_7079.jpg)）。
 
 ---
 
-### 第 6 章｜Codex 實作工作坊（10:35–12:30）⏳ 待逐字稿
+### 第 6 章｜Codex 工作坊（10:35–12:50）｜VTT #2
 
-- 議程為 OpenAI 技術團隊 + Codex Ambassador 帶操作；表現優異團隊有 **API credit**。
-- 目前僅有零散簡報照與 Pictionary 延伸內容；**待 `Founder Day_2.vtt`（或同等檔）補章節與步驟**。
+#### 6.1 流程總覽
+
+| 時間 | 內容 |
+|------|------|
+| ~10:35 | 下載 Codex、填表、ADE 現場協助 |
+| ~11:00 | 點數發放；**自由實作 ~1hr**（建議做到 12:15） |
+| ~11:00–11:40 | **Jane**（台灣 Codex Ambassador）功能導覽 |
+| ~11:40+ | **Jordan**（OpenAI）Fast mode、Subagents、Sites |
+| ~12:15–12:50 | 三組 **Demo 發表** + 評選 |
+| 12:50 | 正式結束；空間與午餐交流至 **14:00** |
+
+**任務**：新產品或既有產品**新功能**均可；做出可給評審看的 MVP / flow。
+
+**獎勵**：發表且評估通過 — 額外 **$5,000** API credits（現場稱三組得獎；原宣傳亦有 $250 + 3mo Pro）。
+
+#### 6.2 Jane · Codex 新功能（Ambassador 導覽）
+
+![Prompt 層級](assets/images/jpeg/IMG_7068.jpg)
+
+| 功能 | 用法與心法 |
+|------|------------|
+| **imageGen v2**（4 月） | 先產 **UI mockup**（文字渲染佳），再讓 Codex 實作 app |
+| **Prompt（UI）** | ① 列出畫面**內容與層級**（標題、hero、vendor 列表…）② 視覺用**具體**描述（避免「高級、夢幻」）③ 給參考圖更佳 ④ 要求 **Safari / iPhone frame** → 較像可實作的產品圖 |
+| **Goal** | 設**可驗證**目標（例：延遲低於 100ms、測試全綠）；可 **Pause / 改目標 / Steer** |
+| **Side 臨時對話** | Fork 主線 context，問「現在做到哪」不打斷 Goal — 搭配 Goal 很好用 |
+| **管理對話** | 一句話開多個 worktree（例：GitHub 找簡單 bug → 開 5 個獨立對話） |
+| **手機遠端** | 外出可改文案、**Approve 權限**、切多台機器上的 agent |
+
+Jane 角色：連結**在地社群 ↔ OpenAI 官方**（辦活動、合作可找 Ambassador）。
+
+#### 6.3 Jordan · 進階操作
+
+| 功能 | 重點 |
+|------|------|
+| **Sites** | 新 hosting；目前偏 **Business / Enterprise**（現場帳號可能看不到） |
+| **Fast mode** | 更快、**耗更多 token/credits**；適合 production triage，不代表更聰明 |
+| **Subagents** | 大 repo / monorepo 可並行；預設最多 **6** 個，可 prompt 加開；**明確指定**各 subagent 負責範圍（安全 / 品質 / bug）效果較好；**credits 消耗較多** |
+| **登入** | API key 登入無 SSO → **plugins 受限**；建議 ChatGPT 登入 |
+
+#### 6.4 工作坊 Demo 得獎（三組）
+
+**第一組 — 題庫／家教輔助（家長場景）**
+
+- 痛點：每期下載 **康軒等版本** 題庫、列印給孩子寫。
+- 實作：語音「小學康軒三年級數學」→ 自動對應年級題庫；**OCR / 切題** + 卡通化；規劃 **語音互動**、會員、多科。
+- 技術：工作坊中用 **GPT-5.5 Fast** 等（現場強調很快）。
+
+**第二組 — SafeTrap（保險科技 · 銷售會議教練）**
+
+- 公司：保險科技起家；新產品輔助 **保險業務銷售會議**（不只逐字稿）。
+- 差異：會中即時 **節奏建議** — 對方沉默、拒絕時怎麼回；可為每家公司客製 **agent persona**。
+- 定位：從 Fintech 銷售場景擴到更多銷售會議類型。
+
+**第三組 — Zero Application（一人公司 / CLI 多 agent）**
+
+- 概念：Individual founder 難 hire → **CLI + 多 VM「辦公室」**，每室有專長 agent，可**互相溝通**（類 OpenClaw / Hermes 想像）。
+- 工作坊成果：原本無 iOS，用 **Codex 約 1 小時** 做出 iOS 介面 + chat + SSH 連線等。
+- 願景：像 Mac **開箱即用**，不需自己「組裝」agent（對比 PC 自組 CPU/GPU）。
+
+> 現場：「大家都做得很棒」，僅 showcase 三組；其餘參與者仍享 $250 + Pro。
+
+#### 6.5 散場
+
+- 12:50 工作坊結束；午餐外場；可交流至 14:00。
+- VTT #2 後段多為交流與背景音，**不納入章節正文**。
 
 ---
 
@@ -425,7 +496,7 @@ Coding CLI（Codex 等；全球首批支援 Antigravity CLI）
 |------|------------|-----------------|-----------------|--------|
 | **目標** | 多看案、少雜事 | 5 人百萬 ARR | NL 部署 / multi-agent | 隊友 + SDK 示範 |
 | **組織** | 5 Agent + Mac Pro | workflow 串行 | Skills + Nufus | Realtime + Server agent |
-| **節奏** | Heartbeat / retro | 做完再下一條 | 一句話 deploy | Goal 直到完成 + Steer |
+| **節奏** | Heartbeat / retro | 做完再下一條 | 一句話 deploy | Goal + Side + 1hr MVP |
 | **風險** | GWS 唯讀 | PR/WIP 限制 | Pod 隔離 | Tool = guardrail |
 
 ### 與 Bill 公開架構的對照
@@ -548,6 +619,21 @@ Coding CLI（Codex 等；全球首批支援 Antigravity CLI）
 
 ---
 
+### 卡片 13｜Codex 工作坊心法（Jane）
+
+1. **imageGen → Codex**：先 mockup 再實作，降低「Fancy 但做不出來」。
+2. **Goal 要有驗收條件** — 測試綠燈、指標達標，不是模糊「幫我做好」。
+3. **Side 問進度、主線繼續跑** — 分工釐清監控 vs 執行。
+4. **Fast mode / Subagents** — 救急用，日常注意 **credits 燒速**。
+
+---
+
+### 卡片 14｜2026 隊友六條件（Thomas）
+
+部署 AI 前自問：任務夠長嗎？多模態齊嗎？非 API 介面怎麼操作？有記憶嗎？好部署嗎？誰治理？
+
+---
+
 ## 簡報與現場照片
 
 - 全部 JPEG：`assets/images/jpeg/`（40 張）
@@ -591,7 +677,8 @@ Coding CLI（Codex 等；全球首批支援 Antigravity CLI）
 | 自己 | 若用 Zeabur：安裝 Agent Skills，試「一句話 deploy」 | Codex + Zeabur 工作坊延伸 |
 | 自己 | 評估 OpenAB：Discord + Codex multi-agent review | 小專案 pilot |
 | 自己 | BAT#30 有意者 | 6–7 月留意 AppWorks 招募 |
-| 自己 | 下半場 VTT 完成後合併第 5–6 章 | 交叉修正 OpenAI 段落 |
+| 自己 | 若參加工作坊：用 ChatGPT 信箱填表領 $250 + Pro | 需 `org-...` ID |
+| 自己 | 試 imageGen mockup → Codex 實作流程 | Jane 建議 |
 | 自己 | 試玩 Pictionary Lab / Agents SDK 開源 repo | 對照簡報架構圖 |
 
 ---
@@ -600,27 +687,35 @@ Coding CLI（Codex 等；全球首批支援 Antigravity CLI）
 
 | 項目 | 說明 |
 |------|------|
-| **下半場 VTT** | `Founder Day_2` 或同等檔生成中 — OpenAI 口頭細節、工作坊步驟 |
-| OpenAI benchmark 數字 | 簡報標 Confidential，筆記僅記趨勢不記精確值 |
-| Codex Workshop 完整流程 | 目前僅簡報照 + Pictionary 延伸 |
-| ABConvert 精確 ARR / 團隊數 | 以官方數據為準 |
-| Nufus 正式名稱與上線 | 簡報為 Nufus；口頭曾稱 Nufus，待官網 |
+| OpenAI benchmark 精確分數 | 簡報 Confidential；僅記趨勢 |
+| 得獎團隊公司正式名稱 | VTT 音譯（SafeTrap、Zero Application 等）待查 |
+| 申請表 / Technology Pro 細節 | 現場未逐字念 URL |
+| ABConvert 精確 ARR | 以官方為準 |
+| Nufus 上線時程 | Zeabur 簡報預告 |
 
 ---
 
 ## 📈 本次學到什麼
 
-1. **AI-native 的單位是 workflow，不是 tool** — Jeffrey 串行；Bill 用 judgment 日誌餵 intelligence。
-2. **鏡像層 + 主帳號隔離** — Notion R/W、GWS READ，是 VC/企業放權底線。
-3. **Agent 輸出要 tune** — Bill 每晚只改 1 項；OpenAI 則用 Steer/Pause 管長任務。
-4. **Multi-agent 殺手場景 = review 流水線** — OpenAB 的 @mention + thread，不是聊天室炫技。
-5. **2026 典範轉移** — 從「工具」到「隊友」；SDK 用 **tool 當 guardrail** 劃清 agent 邊界（Pictionary 示範）。
-6. **簡報 + VTT 交叉** — 逐字稿缺的上半場可用投影片補，但工作坊仍需要第二份 VTT。
+1. **AI-native 的單位是 workflow** — Bill（VC）、Jeffrey（新創）、OpenAB（協作）同一套「分工 + 鏡像 + 人類拍板」。
+2. **2026 = 隊友** — 六條件（長任務、多模態、非 native UI、記憶、部署、治理）是檢查表，不是口號。
+3. **模型強 ≠ 系統強** — GDPval 85% 仍要自己做 harness；這也是 Zeabur / OpenAB 機會。
+4. **Codex 產品節奏** — Goal（可驗證）+ Side（監控）+ 管理多對話（編排）+ 手機 approve = 完整「隊友」操作面。
+5. **工作坊 MVP** — 1 小時可做出語音題庫、銷售教練、多 agent CLI — 關鍵是目標夠具體、可 demo。
+6. **燒錢意識** — Fast mode、Subagents 省時間但吃 credits；Jeffrey 的 Token Maxing 與 Jordan 提醒呼應。
+
+---
+
+## 逐字稿對照
+
+| 檔案 | 約略時間軸 | 內容 |
+|------|------------|------|
+| `…_1.vtt` / `…_1.m4a` | 00:00–01:03 | 開場 → Bill → Jeffrey → Zeabur → OpenAB |
+| `…_2.vtt` / `…_2.m4a` | 00:00–03:27+ | Thomas → 工作坊 → Demo → 交流（後段多雜訊） |
 
 ---
 
 ## 更新紀錄
 
-- 2026-06-03：VTT 上半場 → 章節、摘要、知識卡片
-- 2026-06-03：對齊 `活動紀錄架構.md`；`type: event-notes`
-- 2026-06-03：40 張簡報轉 JPEG；補 Bill SECTION 01/02/05、OpenAI、OpenAB 簡報；狀態改 `draft`（待下半場 VTT）
+- 2026-06-03：VTT #1 + 簡報照片 → 初版
+- 2026-06-03：VTT #2 併入第 5–6 章、工作坊得獎、現場福利；`status: final`
